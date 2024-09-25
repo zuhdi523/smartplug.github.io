@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #2196F3;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+    width: 90%; /* Full width on mobile */
+    max-width: 600px; /* Max width for larger screens */
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 20px; /* Reduce the size of header text */
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Full width, accounting for padding */
+    padding: 8px; /* Reduced padding */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Reduced font size */
+}
+
+button {
+    width: calc(100% - 22px); /* Same width as input field */
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 10px; /* Reduced padding */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Reduced font size */
+}
+
+button:hover {
+    background-color: #1976D2;
+}
+
+#toggleTable {
+    width: 100%; /* Full width for table */
+    border-collapse: collapse;
+}
+
+#toggleTable th, #toggleTable td {
+    border: 1px solid #ddd;
+    padding: 6px; /* Reduced padding in cells */
+    text-align: center;
+    font-size: 14px; /* Reduced font size for table text */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .card {
+        width: 95%; /* Slightly less on smaller screens */
+    }
+}
